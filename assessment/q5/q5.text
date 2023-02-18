@@ -1,0 +1,5 @@
+a. First three questions I really joined answering and was able to do well.
+b.Fourth question which asked to create all those resources using cloudformation casued me some issues as I was getting some 
+errors during the stack creation.
+c.Here I have created some resources using AWS console and other resources using AWS CLI command. But in QA and production environments I would
+try to create all the resources including IAM roles using cloudformation only.
