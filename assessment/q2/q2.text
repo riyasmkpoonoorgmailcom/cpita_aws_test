@@ -1,0 +1,31 @@
+### I have cerated the s3 bucket from AWS console and updated its bucket policy allowing only the root user to have
+### the DeleteObject permission.
+
+## Bucket policy
+{
+    "Version": "2012-10-17",
+    "Id": "Policy1676719907610",
+    "Statement": [
+        {
+            "Sid": "Stmt1676719879778",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:DeleteObject",
+            "Resource": "arn:aws:s3:::captia-test-s3-bucket/*",
+            "Condition": {
+                "ArnNotEquals": {
+                    "aws:PrincipalArn": "arn:aws:iam::accountnumber:root"
+                }
+            }
+        },
+        {
+            "Sid": "Stmt1676720323211",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::accountnumber:root"
+            },
+            "Action": "s3:DeleteObject",
+            "Resource": "arn:aws:s3:::captia-test-s3-bucket/*"
+        }
+    ]
+}

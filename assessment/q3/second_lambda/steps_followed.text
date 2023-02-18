@@ -1,0 +1,6 @@
+### Steps followed.
+
+## Cerated lambda function from AWS console.
+##Updated the lambda function's role to give GetItem and Update Item permission to the customer_detais DynamoDB table.
+## Also added PutObject, GetObject and ListBucket policies to the lambda IAM role.
+## Added the code implementation, used boto3 for querying DynamoDB table.

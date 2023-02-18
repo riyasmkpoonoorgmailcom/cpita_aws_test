@@ -1,0 +1,5 @@
+### Steps followed.
+
+## Cerated lambda function from AWS console.
+##Updated the lambda function's role to give GetItem permission to the customer_detais DynamoDB table.
+## Added the code implementation, used boto3 for querying DynamoDB table.

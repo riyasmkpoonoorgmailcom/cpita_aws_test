@@ -4,9 +4,9 @@
 aws dynamodb create-table \
     --table-name customer_details \
     --attribute-definitions \
-        AttributeName=customer_id,AttributeType=S \
+        AttributeName=telephone_number,AttributeType=N \
     --key-schema \
-        AttributeName=customer_id,KeyType=HASH \
+        AttributeName=telephone_number,KeyType=HASH \
     --provisioned-throughput \
         ReadCapacityUnits=5,WriteCapacityUnits=5 \
     --table-class STANDARD
@@ -15,4 +15,4 @@ aws dynamodb create-table \
 aws dynamodb put-item \
     --table-name customer_details  \
     --item \
-        '{"customer_id": {"S": "drshfhdjvj"}, "first_name": {"S": "Riyas"}, "last_name": {"S": "M K"}, "telephone_number": {"N": "9587453618"}, "telephone_password": {"N": "123456"}}'
+        '{"first_name": {"S": "Riyas"}, "last_name": {"S": "M K"}, "telephone_number": {"N": "9587453618"}, "telephone_password": {"N": "123456"}}'
